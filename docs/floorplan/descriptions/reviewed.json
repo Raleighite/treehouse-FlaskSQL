@@ -1,0 +1,86 @@
+{
+  "files": {
+    "app.py": {
+      "name": "Flask catalog handlers",
+      "description": "Renders list/detail/add/edit pages, reads request.form, commits additions/updates, and deletes via GET /delete/<id>. Also exposes a static demonstration response and 404 template; no auth or CSRF protection appears in these handlers."
+    },
+    "models.py": {
+      "name": "Flask and Pet mapping",
+      "description": "Constructs Flask and SQLAlchemy with SQLite storage; Pet defines identification, timestamps, appearance, image, adoption attributes and description."
+    },
+    "templates/layout.html": {
+      "name": "Shared pet-page shell",
+      "description": "Provides the catalog header, child button/content blocks, local CSS and external icon resources."
+    },
+    "templates/index.html": {
+      "name": "Pet cards list",
+      "description": "Loops over pets to render image, name, age and description with detail links."
+    },
+    "templates/pet.html": {
+      "name": "Pet detail and actions",
+      "description": "Renders one pet and links to edit and deletion; the delete link targets a state-changing GET route."
+    },
+    "templates/addpet.html": {
+      "name": "Add-pet form",
+      "description": "Posts appearance, image, type, gender, care flags and description fields to add_pet and loads the radio-icon helper."
+    },
+    "templates/editpet.html": {
+      "name": "Prepopulated pet editor",
+      "description": "Posts the same pet fields to edit_pet with current values and selected radio states."
+    },
+    "templates/404.html": {
+      "name": "Missing-pet view",
+      "description": "Extends layout with an error message, home/add navigation and an external animated image."
+    },
+    "static/js/app.js": {
+      "name": "Radio-icon interaction",
+      "description": "Registers load-time click handlers on check-circle icons and toggles a nearby input. No network fetches are implemented here."
+    },
+    "static/css/styles.css": {
+      "name": "Pet catalog presentation",
+      "description": "Defines catalog header, cards, detail layout, form controls and responsive page styling."
+    },
+    "README.md": {
+      "name": "Flask course overview",
+      "description": "States the pet-management lesson stack and run instructions; not proof of deployed behavior."
+    },
+    "LICENSE": {
+      "name": "Original project license",
+      "description": "Preserved project license; renderer and font notices are separate."
+    }
+  },
+  "routes": {
+    "GET /": {
+      "name": "GET /",
+      "description": "List all Pet rows and render index.html."
+    },
+    "GET /add-pet": {
+      "name": "GET /add-pet",
+      "description": "GET renders the form; a nonempty submitted form constructs and commits a Pet then redirects to index."
+    },
+    "POST /add-pet": {
+      "name": "POST /add-pet",
+      "description": "GET renders the form; a nonempty submitted form constructs and commits a Pet then redirects to index."
+    },
+    "GET /pet/<id>": {
+      "name": "GET /pet/<id>",
+      "description": "Look up a Pet or raise 404 and render pet.html."
+    },
+    "GET /edit/<id>": {
+      "name": "GET /edit/<id>",
+      "description": "Look up the Pet; GET renders its values and a submitted form overwrites fields and commits before redirect."
+    },
+    "POST /edit/<id>": {
+      "name": "POST /edit/<id>",
+      "description": "Look up the Pet; GET renders its values and a submitted form overwrites fields and commits before redirect."
+    },
+    "GET /delete/<id>": {
+      "name": "GET /delete/<id>",
+      "description": "State-changing GET: delete the selected Pet, commit and redirect to index. No auth guard is present."
+    },
+    "GET /arthas": {
+      "name": "GET /arthas",
+      "description": "Return a fixed demonstration string; no database mutation."
+    }
+  }
+}

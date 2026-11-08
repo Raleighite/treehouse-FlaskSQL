@@ -1,0 +1,90 @@
+{
+  "source_commit": "062b5f760f428dad5e09244734952d1505923d0d",
+  "tracked_regular_files": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "bytes": 86
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "bytes": 1063
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "bytes": 297
+    },
+    {
+      "path": "app.py",
+      "mode": "100644",
+      "bytes": 2452
+    },
+    {
+      "path": "models.py",
+      "mode": "100644",
+      "bytes": 1464
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "bytes": 360
+    },
+    {
+      "path": "static/css/styles.css",
+      "mode": "100644",
+      "bytes": 9251
+    },
+    {
+      "path": "static/js/app.js",
+      "mode": "100644",
+      "bytes": 502
+    },
+    {
+      "path": "templates/404.html",
+      "mode": "100644",
+      "bytes": 657
+    },
+    {
+      "path": "templates/addpet.html",
+      "mode": "100644",
+      "bytes": 6083
+    },
+    {
+      "path": "templates/editpet.html",
+      "mode": "100644",
+      "bytes": 6877
+    },
+    {
+      "path": "templates/index.html",
+      "mode": "100644",
+      "bytes": 659
+    },
+    {
+      "path": "templates/layout.html",
+      "mode": "100644",
+      "bytes": 959
+    },
+    {
+      "path": "templates/pet.html",
+      "mode": "100644",
+      "bytes": 1755
+    }
+  ],
+  "admission_omissions": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "bytes": 86
+    },
+    {
+      "path": "requirements.txt",
+      "mode": "100644",
+      "bytes": 360
+    }
+  ],
+  "application_code_coverage": "All application Python/JS/CSS/HTML source admitted; input CSV data and dependency/development metadata are explicit outside boundaries.",
+  "route_review": "Literal app.route decorators reviewed; framework implicit static/HEAD/OPTIONS not enumerated.",
+  "original_license_unchanged": true
+}
