@@ -1,0 +1,173 @@
+{
+  "$schema": "floorplan/architecture@1",
+  "audience": "everyone",
+  "project": {
+    "name": "treehouse-FlaskSQL",
+    "summary": "A Flask pet catalog renders a listing, detail and add/edit forms, commits Pet changes through SQLAlchemy and deletes through a GET handler. This is a course app, not a verified secure deployment.",
+    "entrypoints": [
+      "app.py"
+    ]
+  },
+  "include": [
+    "code",
+    "config",
+    "data",
+    "docs",
+    "other"
+  ],
+  "nodes": [
+    {
+      "id": "routes",
+      "label": "Pet page handlers",
+      "summary": "Index, details, add/edit, delete and a demonstration response are defined in app.py.",
+      "paths": [
+        "app.py"
+      ],
+      "kind": "service"
+    },
+    {
+      "id": "model",
+      "label": "Pet data model",
+      "summary": "models.py creates the Flask app, SQLite SQLAlchemy binding and Pet fields.",
+      "paths": [
+        "models.py"
+      ],
+      "kind": "service"
+    },
+    {
+      "id": "views",
+      "label": "Jinja pet pages",
+      "summary": "Layout, listing, details, forms and the missing-page template render Pet fields.",
+      "paths": [
+        "templates/**"
+      ],
+      "kind": "ui"
+    },
+    {
+      "id": "assets",
+      "label": "Form interaction and styling",
+      "summary": "CSS styles pages and app.js toggles nearby radio inputs on icon clicks.",
+      "paths": [
+        "static/**"
+      ],
+      "kind": "ui"
+    },
+    {
+      "id": "db",
+      "label": "Local pet database",
+      "summary": "SQLAlchemy commits catalog mutations to SQLite; no actual records are included.",
+      "paths": [],
+      "kind": "external"
+    },
+    {
+      "id": "reference",
+      "label": "Project reference and license",
+      "summary": "Original course documentation and any upstream license remain separate from executable processing.",
+      "paths": [
+        "LICENSE",
+        "README.md"
+      ],
+      "kind": "service"
+    }
+  ],
+  "edges": [
+    {
+      "from": "views",
+      "to": "routes",
+      "label": "POST /add-pet reads form fields, constructs a Pet and stages it.",
+      "kind": "data"
+    },
+    {
+      "from": "routes",
+      "to": "model",
+      "label": "Use the Pet mapping and shared db session.",
+      "kind": "data"
+    },
+    {
+      "from": "model",
+      "to": "db",
+      "label": "Commit the new row, then redirect to the listing.",
+      "kind": "data"
+    },
+    {
+      "from": "db",
+      "to": "routes",
+      "label": "Query all pets for the index.",
+      "kind": "data"
+    },
+    {
+      "from": "routes",
+      "to": "views",
+      "label": "Render cards",
+      "kind": "data"
+    }
+  ],
+  "flows": [
+    {
+      "id": "main",
+      "title": "Follow the pet submission path",
+      "steps": [
+        {
+          "node": "views",
+          "note": "Open the add-pet page and submit its form."
+        },
+        {
+          "node": "routes",
+          "note": "POST /add-pet reads form fields, constructs a Pet and stages it."
+        },
+        {
+          "node": "model",
+          "note": "Use the Pet mapping and shared db session."
+        },
+        {
+          "node": "db",
+          "note": "Commit the new row, then redirect to the listing."
+        },
+        {
+          "node": "routes",
+          "note": "Query all pets for the index."
+        },
+        {
+          "node": "views",
+          "note": "Render cards; detail links lead to edit and GET-delete actions."
+        }
+      ]
+    }
+  ],
+  "tour": [
+    {
+      "node": "routes",
+      "title": "Pet page handlers",
+      "note": "Index, details, add/edit, delete and a demonstration response are defined in app.py."
+    },
+    {
+      "node": "model",
+      "title": "Pet data model",
+      "note": "models.py creates the Flask app, SQLite SQLAlchemy binding and Pet fields."
+    },
+    {
+      "node": "views",
+      "title": "Jinja pet pages",
+      "note": "Layout, listing, details, forms and the missing-page template render Pet fields."
+    },
+    {
+      "node": "assets",
+      "title": "Form interaction and styling",
+      "note": "CSS styles pages and app.js toggles nearby radio inputs on icon clicks."
+    },
+    {
+      "node": "db",
+      "title": "Local pet database",
+      "note": "SQLAlchemy commits catalog mutations to SQLite; no actual records are included."
+    }
+  ],
+  "annotations": [
+    {
+      "path": "app.py",
+      "note": "Reviewed application routes match literal decorators; implicit Flask static/HEAD/OPTIONS behavior is not an authored extra API. Delete mutates on GET. No authentication or form protection was established and no app or database was executed.",
+      "tags": [
+        "hotspot"
+      ]
+    }
+  ]
+}

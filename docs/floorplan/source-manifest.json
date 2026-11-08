@@ -1,0 +1,59 @@
+{
+  "schema": "floorplan/source-manifest@1",
+  "repository": "Raleighite/treehouse-FlaskSQL",
+  "source_commit": "062b5f760f428dad5e09244734952d1505923d0d",
+  "mapping_source": "original bytes; no credential derivative",
+  "source_policy": "See checker selected(): application Python/JS/HTML/CSS and actual config/static/template/input classes, excluding docs/policy/tests/dependencies/caches.",
+  "source_files": {
+    "app.py": "4f4456141127d93953b8a99c2f47632173eb022dc4107a37a8dc79d925f098a9",
+    "models.py": "596c1b186f65f44888d3ab2fb638353410e49433fbd24f7bb80d9bed9ffe21d9",
+    "requirements.txt": "0d8a59d7693c31f4a391d90e7f0c0a7fccc013268bb81cc336d18fb51e94f580",
+    "static/css/styles.css": "576c615e9735cad74c224b27b2812fcc4909693ed5a4d1ccbe17e7dacf04c46a",
+    "static/js/app.js": "b2a5287f09da8683e188f72e307422be1ed679f52c4972b3253847e2165d6fb2",
+    "templates/404.html": "7c5b173a88bfce6e3e91a8cd748ec8ae84a36b04ef4dab2c344d9374db2740a7",
+    "templates/addpet.html": "6ecf68d064ccd0af0f8181dd42699cc3bb975e13d9e595d2ff863ba174af478f",
+    "templates/editpet.html": "66f16fd0555453f162fc8a6168f0f53775a457c1c997f06f8c335a7b58685393",
+    "templates/index.html": "7dd79d83201142c908fa96fef68931ce917e0af23f63269025dec3a8d9da08e6",
+    "templates/layout.html": "41012207e5aaa53b1db1f7e897da93a11869d933c60653d98dc07928c82e81e0",
+    "templates/pet.html": "f06e2f84df1c14489fc6552920bf5b5f3c510acd6cea93e26369bfe683be1a8c"
+  },
+  "admitted_snapshot": {
+    "LICENSE": "278c0c447ae8be6d5e6b745f064cfc8672bdb36672a22df5d981fa1fc2443967",
+    "models.py": "596c1b186f65f44888d3ab2fb638353410e49433fbd24f7bb80d9bed9ffe21d9",
+    "app.py": "4f4456141127d93953b8a99c2f47632173eb022dc4107a37a8dc79d925f098a9",
+    "README.md": "7460f8c502ee7b56b48a41570e082f9e5945ffaa2ec07149b6f69e287652311a",
+    "templates/pet.html": "f06e2f84df1c14489fc6552920bf5b5f3c510acd6cea93e26369bfe683be1a8c",
+    "templates/addpet.html": "6ecf68d064ccd0af0f8181dd42699cc3bb975e13d9e595d2ff863ba174af478f",
+    "templates/layout.html": "41012207e5aaa53b1db1f7e897da93a11869d933c60653d98dc07928c82e81e0",
+    "templates/editpet.html": "66f16fd0555453f162fc8a6168f0f53775a457c1c997f06f8c335a7b58685393",
+    "templates/index.html": "7dd79d83201142c908fa96fef68931ce917e0af23f63269025dec3a8d9da08e6",
+    "templates/404.html": "7c5b173a88bfce6e3e91a8cd748ec8ae84a36b04ef4dab2c344d9374db2740a7",
+    "static/js/app.js": "b2a5287f09da8683e188f72e307422be1ed679f52c4972b3253847e2165d6fb2",
+    "static/css/styles.css": "576c615e9735cad74c224b27b2812fcc4909693ed5a4d1ccbe17e7dacf04c46a"
+  },
+  "counts": {
+    "files": 12,
+    "codeFiles": 10,
+    "routes": 8,
+    "modules": 6,
+    "unassigned": 0,
+    "flows": 1,
+    "tour": 5
+  },
+  "artifacts": {
+    "check_freshness.py": "1ae338eb0a8e6d9f96994b72b93dc07022f221c412ab55b264bc0105c6e164a3",
+    "generator.json": "04edcc596cf52a21813e117f01c84aac12d29cfe100ac81d10bf0f153efc349b",
+    "source-census.json": "3deebbec59dd78fe0a1607c943f3ef86ba94800a76852ec26ca240e27f62e2aa",
+    "architecture.json": "357d83dcbeb125a92814a4769dc5a0ee75cbc5d038d6a3fdcc7ea0b37dad71d2",
+    "NOTICE.md": "1b961d21b4feedd4af9be96ea51dd05d1f7cf45304ab4fe88d95ba0cebeada2f",
+    "index.html": "012391f9b758d77c1242982206cfe300c9772cbff67b58aa4a524acad7c17816",
+    "README.md": "c2a9c4cf99ad1e7179a98b0f8ff9669a216108721d017ecccaec158c736187a8",
+    "descriptions/reviewed.json": "a6d3022664ee6ff1f1a326e82d5d966a7c63e316cc49630efd87ad4aeb21f968",
+    "tests/test_freshness.py": "94a5f53967231f5a9f5228de7a8dc9811f4bf2dc8459c8e24781430bf64c30f7",
+    "licenses/inter-LICENSE.txt": "3b0a5fca3d17942cde889069889dedbbbd075e9b599968c82a95f4d944e9b345",
+    "licenses/elkjs-LICENSE.md": "89591d4578fb1ebd91501312a3d25f021bd865a2e436641c1cf7b1bc7e3c1617",
+    "licenses/LICENSE": "65a06a9dab105cd5a2b713a41a020a442bd431e6e19631182ed3889fd1672faf",
+    "licenses/jetbrains-mono-LICENSE.txt": "403581b69dac5cff4079205e01c6b467e56af449ecbd7247693ddb1baafa005b",
+    "licenses/source/LICENSE": "278c0c447ae8be6d5e6b745f064cfc8672bdb36672a22df5d981fa1fc2443967"
+  }
+}
